@@ -10,7 +10,6 @@
     {
       "files": ["*.json", "*.jsonc"],
       "options": {
-        "tabWidth": 4,
         "semi": false
       }
     }
