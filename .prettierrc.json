@@ -1,0 +1,18 @@
+{
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "semi": true,
+  "overrides": [
+    {
+      "files": ["*.json", "*.jsonc"],
+      "options": {
+        "tabWidth": 4,
+        "semi": false
+      }
+    }
+  ]
+}
