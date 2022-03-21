@@ -10,7 +10,9 @@
   --secondary-color: #182238;
   --secondary-color-dark: #141a29;
   --secondary-color-light: #212f52;
-  --ternary-color: #e5e5e5
+  --ternary-color: #e5e5e5;
+  --ternary-color-dark-bold: #7c7c7c;
+  --ternary-color-dark: #b2b2b2;
 }
 
 html {
@@ -21,6 +23,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: var(--seconday-color);
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, div {

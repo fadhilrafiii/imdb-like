@@ -1,0 +1,60 @@
+.tray-box {
+  position: fixed;
+  right: -500px;
+  top: 0;
+  width: 500px;
+  height: 100vh;
+  transition: all .5s;
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+  padding: 40px 32px 40px 48px;
+  box-sizing: border-box;
+}
+
+.tray-box.opened {
+  position: fixed;
+  right: 0;
+}
+
+.close-drag {
+  position: absolute;
+  width: 3px;
+  height: 60px;
+  left: 0px;
+  background-color: var(--ternary-color-dark);
+  border-radius: 4px;
+  transition: all .5s;
+}
+
+.close-drag::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  left: 8px;
+  top: calc(50% - 20px);
+  background-color: var(--ternary-color-dark);
+  border-radius: 4px;
+  transition: all .5s;
+}
+
+.close-drag-container {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close-drag-container:hover {
+  cursor: pointer;
+}
+
+.close-drag-container:hover .close-drag,
+.close-drag-container:hover .close-drag::after {
+  transform: scale(1.05);
+  transform-origin: top;
+  cursor: pointer;
+  background-color: var(--ternary-color);
+}

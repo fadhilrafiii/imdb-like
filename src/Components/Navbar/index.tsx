@@ -7,7 +7,7 @@ const Navbar = () => (
   <div className="navbar">
     <div className="navbar-logo">
       <span>IM</span>
-      <span>DB</span>
+      <span>BD</span>
     </div>
     <div className="navbar-menu">
       <NavLink

@@ -47,6 +47,7 @@
     "react/jsx-props-no-spreading": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-empty-function": "off",
+    "jsx-a11y/control-has-associated-label": "off",
     "import/order": [
       "error",
       {
