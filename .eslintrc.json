@@ -50,12 +50,7 @@
     "import/order": [
       "error",
       {
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        },
-        "newlines-between": "always",
-        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "groups": ["builtin", "external", "internal"],
         "pathGroups": [
           {
             "pattern": "react",
@@ -63,7 +58,8 @@
             "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["builtin"]
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always"
       }
     ],
     "@typescript-eslint/naming-convention": [
