@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Navbar from 'Components/Navbar';
+
+const Home = lazy(() => import('Pages/Home'));
+const Movies = lazy(() => import('Pages/Movies'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Suspense fallback={<h1>Is Loading</h1>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 }
 
