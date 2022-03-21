@@ -1,0 +1,47 @@
+.loading-container {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.loading-container div {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-text {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -60px;
+}
+
+.loading-text span {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  transition: all .5s;
+  animation-name: dot !important;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.loading-text span:nth-child(2) {
+  animation-delay: .25s;
+}
+
+.loading-text span:nth-child(1) {
+  animation-delay: .5s;
+}
+
+@keyframes dot {
+  0%  { top: 0; } 
+  50% { top: -10px; }
+  100% { top: 0; }
+}
+
