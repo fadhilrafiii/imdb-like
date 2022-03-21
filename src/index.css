@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Sintony&family=Palette+Mosaic&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-font: 'Sintony';
+  --secondary-font: 'Poppins';
+  --ternary-font: 'Palette Mosaic';
+  --primary-color: #fda516;
+  --primary-color-dark: #e88401;
+  --primary-color-light: #fed053;
+  --secondary-color: #182238;
+  --secondary-color-dark: #141a29;
+  --secondary-color-light: #212f52;
+  --ternary-color: #e5e5e5
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--seconday-color);
+}
