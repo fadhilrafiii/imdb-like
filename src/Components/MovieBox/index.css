@@ -1,0 +1,44 @@
+.movie-box {
+  padding: 12px 8px;
+  width: 240px;
+  height: 300px;
+}
+
+.movie-img {
+  width: 240px;
+  height: 180px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px var(--secondary-color-dark);
+  object-fit: cover;
+  object-position: top;
+}
+
+.movie-name {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+.movie-genre {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.rating {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.rating span {
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+.rating span:nth-child(2) {
+  font-size: 12px;
+}
