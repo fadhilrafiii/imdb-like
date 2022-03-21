@@ -7,7 +7,7 @@
   background-color: var(--secondary-color);
 }
 
-.navbar-logo {
+.navbar-logo span {
   font-family: var(--ternary-font);
   font-size: 36px;
 }

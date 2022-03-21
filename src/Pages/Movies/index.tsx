@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
+import MovieBox from 'Components/MovieBox';
+import { Movie } from 'Components/MovieBox/Types';
 import SearchBox from 'Components/SearchBox';
+
+import { movies } from './Dummy';
 import './index.css';
 
 const Movies = () => {
@@ -32,6 +36,13 @@ const Movies = () => {
           onChange={onChangeSearch}
           onClick={onClickSearch}
         />
+        <br />
+        <h2>Latest Movies</h2>
+        <div className="latest-movie">
+          {movies.map((movie: Movie) => (
+            <MovieBox movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );

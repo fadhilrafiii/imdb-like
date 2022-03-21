@@ -6,8 +6,22 @@
 .movies {
   position: relative;
   box-sizing: border-box;
-  padding: 64px 24px;
-  min-width: 330px;
+  padding: 40px 24px;
+  min-width: 350px;
   width: 80%;
   margin: 0 auto;
+}
+
+.latest-movie {
+  margin: 0 -12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 686px) {
+  .latest-movie {
+    justify-content: center;
+  }
 }
