@@ -16,11 +16,16 @@ const MostPopular = ({
   return (
     <>
       <h2>Most Popular Animes</h2>
-      <div className="hot-anime">
+      <div
+        className={`hot-anime ${
+          (!data || !data.length) && !loading ? 'centered' : ''
+        }`}
+      >
         {!loading &&
           !!data &&
           data.map((anime: Anime) => (
             <div
+              key={anime?.title?.romaji || anime?.title?.english}
               className="anime-container"
               role="presentation"
               onClick={() => onClickAnime(anime.id, AnimeDataType.MOST_POPULAR)}

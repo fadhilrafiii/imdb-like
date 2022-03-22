@@ -1,7 +1,7 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 
 const link = createHttpLink({
-  uri: process.env.REACT_APP_CLIENT_URI,
+  uri: process.env.REACT_APP_GRAPHQL_URI,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
