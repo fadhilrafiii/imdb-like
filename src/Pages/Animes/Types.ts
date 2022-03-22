@@ -1,4 +1,5 @@
 import { Anime } from 'Types/Anime';
+import { PaginationType } from 'Types/Pagination';
 
 export type MostPopularAnimeProps = {
   loading: boolean;
@@ -10,8 +11,9 @@ export type SearchAnimeProps = {
   search: string;
   loading: boolean;
   data: Array<Anime>;
-  found: number;
   onClickAnime: (id: number, from: AnimeDataType) => void;
+  pagination: PaginationType;
+  onChangePage: (current: number) => void;
 };
 
 export enum AnimeDataType {

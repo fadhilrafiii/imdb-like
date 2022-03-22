@@ -45,8 +45,6 @@ export const QUERY_SEARCH_ANIMES = gql`
         total
         currentPage
         lastPage
-        hasNextPage
-        perPage
       }
       media(search: $search, type: ANIME, sort: [SCORE_DESC, START_DATE_DESC]) {
         id

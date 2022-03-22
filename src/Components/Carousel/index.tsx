@@ -2,6 +2,8 @@ import React from 'react';
 
 import Slider from 'react-slick';
 
+import Image from 'Components/Image';
+
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import './index.css';
@@ -26,7 +28,7 @@ const Carousel = ({
     <Slider {...settings} className={isGradient ? 'gradient' : ''}>
       {slides.map((src: string) => (
         <div key={src} className="img-container">
-          <img src={src} alt={src.split('.')[0]} />
+          <Image src={src} alt={src.split('.')[0]} />
         </div>
       ))}
     </Slider>

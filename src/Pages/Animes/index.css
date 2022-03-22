@@ -30,6 +30,11 @@
   flex-wrap: wrap;
   position: relative;
   min-height: 320px;
+  width: 100%;
+}
+
+.hot-anime.centered {
+  justify-content: center;
 }
 
 @media (max-width: 686px) {
@@ -93,4 +98,16 @@
   border-radius: 12px;
   object-fit: cover;
   object-position: top;
+}
+
+.search-anime {
+  position: relative;
+  width: 100%;
+}
+
+.search-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

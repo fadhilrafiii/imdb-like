@@ -1,9 +1,11 @@
 import React, { useCallback, useState } from 'react';
 
 import { useQuery } from '@apollo/client';
+import parse from 'html-react-parser';
 
 import { QUERY_HOT_ANIMES, QUERY_SEARCH_ANIMES } from 'Client/Animes';
 import StarIcon from 'Components/Icons/StarIcon';
+import Image from 'Components/Image';
 import SearchBox from 'Components/SearchBox';
 import TrayBox from 'Components/TrayBox';
 import { Anime } from 'Types/Anime';
@@ -18,7 +20,7 @@ const Animes = () => {
   const [isTrayOpen, setIsTrayOpen] = useState<boolean>(false);
   const [search, setSearch] = useState<string>('');
   const [selectedAnime, setSelectedAnime] = useState<Anime>();
-  const [page] = useState<number>(1);
+  const [page, setPage] = useState<number>(1);
 
   const { loading: loadingMostPopular, data: mostPopularAnime } = useQuery(
     QUERY_HOT_ANIMES,
@@ -74,6 +76,10 @@ const Animes = () => {
     [mostPopularAnime?.Page?.media, searchedAnime?.Page?.media],
   );
 
+  const onChangePage = (currentPage: number) => {
+    setPage(currentPage);
+  };
+
   return (
     <div className="animes-container">
       <div className={`animes ${isTrayOpen ? 'minimized' : ''}`}>
@@ -89,8 +95,9 @@ const Animes = () => {
             loading={loadingSearch}
             data={searchedAnime?.Page?.media || []}
             search={search}
-            found={searchedAnime?.Page?.pageInfo?.total || 0}
             onClickAnime={onClickAnime}
+            pagination={searchedAnime?.Page?.pageInfo}
+            onChangePage={onChangePage}
           />
         )}
         <br />
@@ -117,14 +124,14 @@ const Animes = () => {
               <span>{selectedAnime.averageScore}</span>
               <span>{`(${selectedAnime.reviews.pageInfo.total} reviews)`}</span>
             </div>
-            <img
+            <Image
               src={selectedAnime.bannerImage}
               alt={selectedAnime.title.romaji}
               className="selected-anime-img"
             />
             <h4 className="desc-label">Description:</h4>
             <p className="selected-anime-description">
-              {selectedAnime.description}
+              {parse(selectedAnime.description || '')}
             </p>
           </div>
         ) : (
