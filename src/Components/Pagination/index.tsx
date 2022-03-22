@@ -6,9 +6,14 @@ import { PaginationProps } from './Types';
 const Pagination = ({ page, totalPages, onChangePage }: PaginationProps) => {
   const pages = useMemo(() => {
     const pageArr = [1];
-    const startIndex = page - 4 > 2 ? page - 4 : 2;
+    const startIndexDesktop = page - 4 > 2 ? page - 4 : 2;
+    const startIndexMobile = page - 2 > 2 ? page - 2 : 2;
+    const startIndex =
+      window.innerWidth > 540 ? startIndexDesktop : startIndexMobile;
+    const limitBtnNumber = window.innerWidth > 540 ? 10 : 4;
+
     for (let i = startIndex; i < totalPages; i += 1) {
-      if (Math.abs(i - page) <= 4 || pageArr.length < 10) {
+      if (Math.abs(i - page) <= 2 || pageArr.length < limitBtnNumber) {
         pageArr.push(i);
       }
     }

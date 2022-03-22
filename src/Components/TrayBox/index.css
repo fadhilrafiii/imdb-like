@@ -11,6 +11,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 540px) {
+  .tray-box {
+    width: 360px;
+    right: -360px;
+  }
+}
+
 .tray-box.opened {
   position: fixed;
   right: 0;

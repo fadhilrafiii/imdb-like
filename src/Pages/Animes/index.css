@@ -16,6 +16,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 540px) {
+  .animes {
+    padding: 40px 8px;
+  }
+}
+
 .animes.minimized {
   width: calc(100% - 500px);
   min-width: 600px;
