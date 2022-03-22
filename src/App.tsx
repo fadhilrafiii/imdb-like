@@ -2,20 +2,20 @@ import React, { lazy, Suspense } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Loading from 'Components/Loading';
 import Navbar from 'Components/Navbar';
+import LoadingPage from 'Pages/Loading';
 
 const Home = lazy(() => import('Pages/Home'));
-const Movies = lazy(() => import('Pages/Movies'));
+const Animes = lazy(() => import('Pages/Animes'));
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<LoadingPage />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/animes" element={<Animes />} />
         </Routes>
       </Suspense>
     </Router>
