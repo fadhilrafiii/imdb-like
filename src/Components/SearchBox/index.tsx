@@ -27,7 +27,7 @@ const SearchBox = ({
           ref={inputRef}
           type="text"
           value={value}
-          placeholder="Type to search movies..."
+          placeholder="Type to search animes..."
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             onChange(e.target.value);
           }}

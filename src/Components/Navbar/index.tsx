@@ -19,12 +19,12 @@ const Navbar = () => (
         Home
       </NavLink>
       <NavLink
-        to="/movies"
+        to="/animes"
         className={({ isActive }: { isActive: boolean }) =>
           isActive ? 'menu active' : 'menu'
         }
       >
-        Movie List
+        Anime List
       </NavLink>
     </div>
   </div>

@@ -35,13 +35,12 @@
         "tsx": "never"
       }
     ],
-    "max-len": ["error", { "code": 80 }],
+    "max-len": ["error", { "code": 80, "ignoreStrings": true }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "semi": "warn",
-    "no-unused-vars": "warn",
     "react/function-component-definition": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "react/jsx-props-no-spreading": "off",

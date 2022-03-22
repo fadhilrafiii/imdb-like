@@ -25,7 +25,7 @@ const Carousel = ({
   return (
     <Slider {...settings} className={isGradient ? 'gradient' : ''}>
       {slides.map((src: string) => (
-        <div className="img-container">
+        <div key={src} className="img-container">
           <img src={src} alt={src.split('.')[0]} />
         </div>
       ))}

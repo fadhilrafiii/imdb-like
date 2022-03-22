@@ -1,10 +1,11 @@
-.movie-box {
-  padding: 12px 8px;
+.anime-box {
+  padding: 12px 8px 24px;
   width: 240px;
   height: 300px;
+  position: relative;
 }
 
-.movie-img {
+.anime-img {
   width: 240px;
   height: 180px;
   border-radius: 12px;
@@ -13,7 +14,7 @@
   object-position: top;
 }
 
-.movie-name {
+.anime-name {
   margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23,7 +24,7 @@
   -webkit-box-orient: vertical;
 }
 
-.movie-genre {
+.anime-genre {
   margin: 6px 0;
   font-size: 12px;
 }
@@ -32,6 +33,8 @@
   font-size: 10px;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 15px;
 }
 
 .rating span {
