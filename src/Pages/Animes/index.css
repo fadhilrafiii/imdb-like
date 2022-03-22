@@ -83,12 +83,12 @@
   text-justify: inter-word;
   color: var(--ternary-color-dark-bold);
   font-size: 12.5px;
-  overflow: hidden;
+  /* overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 7; /* number of lines to show */
+  -webkit-line-clamp: 7;
   line-clamp: 7; 
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; */
 }
 
 .selected-anime-img {
