@@ -9,6 +9,7 @@ import Image from 'Components/Image';
 import SearchBox from 'Components/SearchBox';
 import TrayBox from 'Components/TrayBox';
 import { Anime } from 'Types/Anime';
+import { getRatings } from 'Utils/Parser';
 
 import './index.css';
 import MostPopular from './MostPopular';
@@ -126,7 +127,7 @@ const Animes = () => {
               <span>
                 <StarIcon fill="#fda516" />
               </span>
-              <span>{selectedAnime.averageScore}</span>
+              <span>{getRatings(selectedAnime.averageScore)}</span>
               <span>{`(${selectedAnime.reviews.pageInfo.total} reviews)`}</span>
             </div>
             <Image
