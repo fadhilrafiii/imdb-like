@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StarIcon from 'Components/Icons/StarIcon';
+import { StarIcon } from 'Components/Icons';
 import Image from 'Components/Image';
 
 import './index.css';

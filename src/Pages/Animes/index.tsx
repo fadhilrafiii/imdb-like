@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import parse from 'html-react-parser';
 
 import { QUERY_HOT_ANIMES, QUERY_SEARCH_ANIMES } from 'Client/Animes';
-import StarIcon from 'Components/Icons/StarIcon';
+import { StarIcon } from 'Components/Icons';
 import Image from 'Components/Image';
 import SearchBox from 'Components/SearchBox';
 import TrayBox from 'Components/TrayBox';

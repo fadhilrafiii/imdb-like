@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadingIcon from 'Components/Icons/LoadingIcon';
+import { LoadingIcon } from 'Components/Icons';
 import './index.css';
 
 const Loading = () => {
