@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useMemo } from 'react';
 
 import { ImageProps } from './Types';
 
 const Image = ({ src, alt, className }: ImageProps) => {
-  const [imgUrl, setImgUrl] = useState<string>(src);
-  const onError = () => {
-    setImgUrl('images/not-found.jpg');
+  const imgUrl = useMemo(() => src, [src]);
+
+  const onError = (e: SyntheticEvent<HTMLImageElement>) => {
+    e.currentTarget.src = 'images/not-found.jpg';
+    e.currentTarget.onerror = null;
   };
 
   return (

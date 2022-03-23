@@ -10,8 +10,12 @@ const TrayBox = ({ isOpen, children, onClose }: TrayBoxProps) => {
       className={`tray-box ${isOpen ? 'opened' : ''}`}
       onDragEnd={onClose}
     >
-      <div className="close-drag-container">
-        <div className="close-drag" role="presentation" onClick={onClose} />
+      <div
+        className="close-drag-container"
+        role="presentation"
+        onClick={onClose}
+      >
+        <div className="close-drag" />
       </div>
       <div className="tray-box-content">{children}</div>
     </div>

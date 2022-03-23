@@ -28,7 +28,9 @@ const MostPopular = ({
               key={anime?.title?.romaji || anime?.title?.english}
               className="anime-container"
               role="presentation"
-              onClick={() => onClickAnime(anime.id, AnimeDataType.MOST_POPULAR)}
+              onClick={(e: React.MouseEvent<HTMLDivElement>) =>
+                onClickAnime(e, anime.id, AnimeDataType.MOST_POPULAR)
+              }
             >
               <AnimeBox
                 title={anime.title.english || anime.title.romaji}

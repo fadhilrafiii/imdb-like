@@ -3,6 +3,12 @@
   width: 240px;
   height: 300px;
   position: relative;
+  transition: all .5s;
+}
+
+.anime-box:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .anime-img {

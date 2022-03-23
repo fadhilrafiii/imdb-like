@@ -35,7 +35,9 @@ const SearchAnime = ({
               key={anime.title.english || anime.title.romaji}
               className="anime-container"
               role="presentation"
-              onClick={() => onClickAnime(anime.id, AnimeDataType.SEARCH)}
+              onClick={(e: React.MouseEvent<HTMLDivElement>) =>
+                onClickAnime(e, anime.id, AnimeDataType.SEARCH)
+              }
             >
               <AnimeBox
                 title={anime.title.english || anime.title.romaji}

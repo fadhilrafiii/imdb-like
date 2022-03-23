@@ -58,14 +58,15 @@ const Animes = () => {
   };
 
   const onClickAnime = useCallback(
-    (id: number, from: AnimeDataType) => {
+    (e: React.MouseEvent<HTMLDivElement>, id: number, from: AnimeDataType) => {
+      e.stopPropagation();
       let selected;
       if (from === AnimeDataType.MOST_POPULAR) {
-        selected = mostPopularAnime.Page.media.find(
+        selected = mostPopularAnime?.Page?.media.find(
           (anime: Anime) => anime.id === id,
         );
       } else {
-        selected = searchedAnime.Page.media.find(
+        selected = searchedAnime?.Page?.media.find(
           (anime: Anime) => anime.id === id,
         );
       }
@@ -82,7 +83,11 @@ const Animes = () => {
 
   return (
     <div className="animes-container">
-      <div className={`animes ${isTrayOpen ? 'minimized' : ''}`}>
+      <div
+        className={`animes ${isTrayOpen ? 'minimized' : ''}`}
+        role="presentation"
+        onClick={onCloseTray}
+      >
         <SearchBox
           isOpen={isSearchOpen}
           value={search}
@@ -125,8 +130,8 @@ const Animes = () => {
               <span>{`(${selectedAnime.reviews.pageInfo.total} reviews)`}</span>
             </div>
             <Image
-              src={selectedAnime.bannerImage}
-              alt={selectedAnime.title.romaji}
+              src={selectedAnime?.bannerImage}
+              alt={selectedAnime?.title.romaji}
               className="selected-anime-img"
             />
             <h4 className="desc-label">Description:</h4>
